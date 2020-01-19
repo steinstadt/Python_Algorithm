@@ -1,9 +1,15 @@
 # バブルソート
 
+import random
+
 def main():
 
-    NUM = 6 # データ数
-    a = [80, 41, 35, 90, 40, 20]
+    NUM = 100 # データ数
+    a = [] # データ
+
+    # データの取得
+    for i in range(0,NUM):
+        a.append(1000*random.random())
 
     for i in range(0, NUM-1):
         for j in range(NUM-1, i, -1):
