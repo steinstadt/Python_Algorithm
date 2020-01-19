@@ -25,7 +25,7 @@ def main():
         a[s] = t
 
     for i in range(0, NUM):
-        print("%d "%(a[i]), end="")
+        print("%8d "%(a[i]), end="")
 
 if __name__ == "__main__":
     main()
