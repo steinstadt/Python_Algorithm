@@ -1,4 +1,4 @@
-# ハノイの塔
+# ハノイの塔（再帰解）
 import os, time
 
 class Hanoi():
