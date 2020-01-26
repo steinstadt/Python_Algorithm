@@ -1,5 +1,5 @@
 # ハノイの塔
-import sys, time
+import os, time
 
 class Hanoi():
     def __init__(self,n):
@@ -27,26 +27,36 @@ class Hanoi():
         b.insert(0, a_num)
 
     def print_hanoi(self,):
+        # タイトル出力
+        print("==ハノイの塔==\n")
+
         # aの出力
-        print("aの円盤")
+        print("--aの円盤--")
         for i in self.a:
-            mark = "*"*(i)
-            print("%s"%(mark))
-        print("\n\n---------------------------")
+            mark = "* "*(i)
+            print(mark)
+        print("\n\n\n")
 
         # bの出力
-        print("bの円盤")
+        print("--bの円盤--")
         for i in self.b:
-            mark = "*"*(i)
-            print("%s"%(mark))
-        print("\n\n---------------------------")
+            mark = "* "*(i)
+            print(mark)
+        print("\n\n\n")
+
 
         # cの出力
-        print("cの円盤")
+        print("--cの円盤--")
         for i in self.c:
-            mark = "*"*(i)
-            print("%s"%(mark))
-        print("\n\n---------------------------")
+            mark = "* "*(i)
+            print(mark)
+        print("\n\n\n")
+
+        # 1秒間スリープ
+        time.sleep(1.5)
+
+        # コンソール出力のクリア
+        os.system('clear')
 
 def main():
     num = int(input("円盤の枚数  ? "))

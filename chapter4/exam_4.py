@@ -1,36 +1,36 @@
 # ハノイの塔(再帰解)
-import sys, time
+import os, time
 
 # 円盤の移動結果を出力
 def print_hanoi(a, b, c):
-    text = ""
+    text = "==ハノイの塔==\n"
     space = "    "
     # aの追加
-    text += space + "aの円盤\n"
+    text +="--aの円盤--\n"
     for i in a:
         mark = " * "*(i)
-        text += space + mark + "\n"
-    text += "\n\n---------------------------\n"
+        text += space + mark + "\n\n"
 
     # bの結果
-    text += space + "bの円盤\n"
+    text +="--bの円盤--\n"
     for i in b:
         mark = " * "*(i)
-        text += space + mark + "\n"
-    text += "\n\n---------------------------\n"
+        text += space + mark + "\n\n"
 
     # cの結果
-    text += space + "cの円盤\n"
+    text +="--cの円盤--\n"
     for i in c:
         mark = " * "*(i)
-        text += space + mark + "\n"
-    text += "\n\n---------------------------\n"
+        text += space + mark + "\n\n"
 
     #結果の出力
     print(text, end="")
 
     # 1秒間スリープ
     time.sleep(1.5)
+
+    # コンソール出力のクリア
+    os.system('clear')
 
 # aからbへの円盤の移動
 def move_hanoi(a, b):
